@@ -10,7 +10,7 @@
         <ul class='Menu'>
             <li><a href="">Inicio</a></li>
             <li><a href="">Produtos</a></li>
-            <li><a href="">Comprar</a></li>
+            <li><a href="">Serviços</a></li>
         </ul>
     </div>
 
