@@ -8,8 +8,8 @@
     <div class='cabecalho'>
         <img src="../imgs/logo.png" class='Logo'>
         <ul class='Menu'>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Produtos</a></li>
+            <li><a href="../inicio/index.php">Inicio</a></li>
+            <li><a href="../produtos/index.php">Produtos</a></li>
             <li><a href="">Serviços</a></li>
         </ul>
     </div>
