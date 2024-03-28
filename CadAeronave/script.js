@@ -17,7 +17,7 @@ function AdicionarImg(){
     Linha.appendChild(Celula1);
 
     let Celula2=document.createElement('td');
-    Celula2.innerHTML='<input type="file" name="Arquivo" accept="image/png,image/jpeg">';
+    Celula2.innerHTML='<input type="file" name="Arquivo[]" accept="image/png,image/jpeg">';
     Linha.appendChild(Celula2);
 }
 function RemoverImg(){
@@ -41,19 +41,19 @@ function AdicionarEquipamento(){
     Tabela.appendChild(Linha);
 
     let Celula1=document.createElement('td');
-    Celula1.innerHTML='<input type="checkbox" name="EquiCB">';
+    Celula1.innerHTML='<input type="checkbox" name="EquiCB[]">';
     Linha.appendChild(Celula1);
 
     let Celula2=document.createElement('td');
-    Celula2.innerHTML='<input type="text" name="Descricao">';
+    Celula2.innerHTML='<input type="text" name="DescricaoEQ[]">';
     Linha.appendChild(Celula2);
 
     let Celula3=document.createElement('td');
-    Celula3.innerHTML='<input type="text" name="Fabricante">';
+    Celula3.innerHTML='<input type="text" name="FabricanteEQ[]">';
     Linha.appendChild(Celula3);
 
     let Celula4=document.createElement('td');
-    Celula4.innerHTML='<input type="text" name="Modelo">';
+    Celula4.innerHTML='<input type="text" name="ModeloEQ[]">';
     Linha.appendChild(Celula4);
 }
 
@@ -72,9 +72,39 @@ function RemoverEquipamento(){
     }
 }
 
+let SalvarBTN=document.getElementById('SalvarBTN');
+let Formulario=document.getElementById('Formulario');
+
+SalvarBTN.addEventListener('click',(e)=>{
+
+    if(VerificarCampos()==false){
+        Swal.fire('Erro','Campos obrigatorios vazio.','error');
+    }else{
+        if(VerificarImagens()==false){
+            Swal.fire({
+                title:'Aviso',
+                text: 'Tem certeza que deseja continuar sem adicionar imagens?',
+                icon:'info',
+                confirmButtonText:'Sim, Tenho Certeza',
+                cancelButtonText:'Voltar',
+                showCancelButton:true
+            }).then((retorno)=>{
+                if(retorno['isConfirmed']===true){
+                    SalvarBTN.type='submit';
+                    SalvarBTN.click;
+                }
+            });
+        }else{
+            SalvarBTN.type='submit';
+            SalvarBTN.click;
+        }
+    }
+});
+
 document.addEventListener('keyup',()=>{
     console.log(VerificarCampos());
 });
+
 
 function VerificarCampos(){
     let Fabricante=document.getElementById('Fabricante');
@@ -104,5 +134,21 @@ function VerificarCampos(){
 }
 function VerificarImagens(){
     let Linhas=document.getElementsByName('Linha');
+    let Arquivo=document.getElementsByName('Arquivo[]');
+    let TodasOcupadas=true;
+
+    if(Linhas.length>0){
+        for(L=0;L<Linhas.length;L++){
+            if(Arquivo[L].value==''){
+                TodasOcupadas=false;
+            }
+        }
+    }else{
+        TodasOcupadas=false;
+    }
+
+    return TodasOcupadas;
+
+
     
 }

@@ -6,13 +6,14 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="../cabecalho/style.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Cadastro de Aeronaves</title>
 </head>
 <body>
     <?php
         require('../cabecalho/index.php');
     ?>
-    <form action="" method="post" enctype='multipart/form-data' class='Formulario'>
+    <form action="salvar.php" method="post" enctype="multipart/form-data" class='Formulario' id='Formulario'>
         <label class='Titulo'>Fabricante</label><br>
         <input class='Campo' id='Fabricante' type="text" name="Fabricante" id=""><br>
         <label class='Titulo'>Modelo</label><br>
@@ -32,9 +33,9 @@
             ?>
         </select><br>
         <label class='Titulo'>Horas Atuais</label><br>
-        <input class='Campo' id='HorasAtuais' type="number" name="HorasAtuais" id=""><br>
+        <input class='Campo' id='HorasAtuais' type="number" step='0.01' name="HorasAtuais" id=""><br>
         <label class='Titulo'>Horas Disponíveis de Motor</label><br>
-        <input class='Campo' id='HorasDisp' type="number" name="HorasDisp" id=""><br><br><br>
+        <input class='Campo' id='HorasDisp' type="number" step='0.01' name="HorasDisp" id=""><br><br><br>
         <label class='Titulo'>Imagens</label><br>
         <div class='DivTabela'>
             <button type='button' class='AdicionarBTN' onclick='AdicionarImg()'>+</button>
@@ -57,54 +58,10 @@
                     <th>Fabricante</th>
                     <th>Modelo</th>
                 </thead>
-                <tr name='LinhaEq'>
-                    <td><input type="checkbox"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
             </table>
         </div>
-        <input  type="submit" value="Salvar" id='SalvarBTN'>
+        <input  type="button" value="Salvar" id='SalvarBTN' name='SalvarBTN'>
     </form>
-    <?php
-    require_once('../Conexao.php');
-
-    if(isset($_FILES['Arquivo'])){
-        $Arquivo=$_FILES['Arquivo'];
-        $ArquivoDivido=explode('.',$Arquivo['name']);
-        $Formato=strtolower($ArquivoDivido[sizeof($ArquivoDivido)-1]);
-
-        if($Formato=='jpeg' || $Formato=='png'){
-            $Permitido=false;
-
-            while($Permitido==false){
-                $Nome='Aero'.uniqid().'.'.$Formato;
-                $Caminho='../srcimgs/'.$Nome;
-               
-
-                move_uploaded_file($Arquivo['tmp_name'],$Caminho);
-
-                $SQLSel="SELECT * FROM produtos_imgs WHERE Nome='$Nome'";
-                $ReqSel=mysqli_query($mysqli,$SQLSel);
-                $QTDSel=$ReqSel->num_rows;
-
-                if($QTDSel==0){
-                    $SQLInsert="INSERT INTO produtos_imgs (`Nome`,`Caminho`) VALUES ('$Nome','$Caminho')";
-                    $ReqInsert=mysqli_query($mysqli,$SQLInsert);
-                    echo 'Salvo com sucesso.';
-                    $Permitido=true;
-                }else{
-                    $Permitido=false;
-                }
-            }
-            
-        }else{
-            echo 'Selecione um formato de arquivo suportado(.jpeg, .png)';
-        }
-        
-        //echo print_r($Arquivo['name']);
-    }
-    ?>
+    
 </body>
 </html>
