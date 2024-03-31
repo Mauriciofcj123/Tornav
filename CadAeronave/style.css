@@ -9,12 +9,33 @@
     border-radius: 10px;
 }
 .Campo{
-    width: 40%;
+    width: 50%;
     height: 40px;
     text-align: center;
     color: rgb(37, 37, 37);
     font-weight: bold;
     outline: none;
+}
+.Longo{
+    height: 200px;
+}
+.Botoes{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    border: 1px solid rgb(59, 59, 59);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    transition-duration: 0.5s;
+}
+.Botoes:hover{
+    background-color: rgb(237, 255, 235);
+    color: rgb(32, 32, 32);
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
 }
 .Titulo{
     width: 100%;

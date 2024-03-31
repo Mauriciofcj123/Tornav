@@ -1,5 +1,3 @@
-
-
 function Caminho(){
     let Arquivo=document.getElementById('Arquivo');
     console.log(Arquivo.name);
@@ -78,7 +76,7 @@ let Formulario=document.getElementById('Formulario');
 SalvarBTN.addEventListener('click',(e)=>{
 
     if(VerificarCampos()==false){
-        Swal.fire('Erro','Campos obrigatorios vazio.','error');
+        Swal.fire('Erro','Campos obrigatórios vazios.','error');
     }else{
         if(VerificarImagens()==false){
             Swal.fire({
@@ -147,8 +145,67 @@ function VerificarImagens(){
         TodasOcupadas=false;
     }
 
-    return TodasOcupadas;
+    return TodasOcupadas;    
+}
 
+let Pesquisar=document.getElementById('PesquisarBTN');
 
-    
+Pesquisar.addEventListener('click',(e)=>{
+    e.preventDefault();
+
+    BuscarPrefixo();
+});
+
+let GerarBTN=document.getElementById('GerarBTN');
+GerarBTN.addEventListener('click',(e)=>{
+    e.preventDefault();
+
+    BuscarTexto();
+});
+
+function BuscarPrefixo(){
+    let Prefixo=document.getElementById('Prefixo');
+    let Valor=Prefixo.value.replaceAll('-','');
+    let Fabricante=document.getElementById('Fabricante');
+    let Modelo=document.getElementById('Modelo');
+    let AnoFab=document.getElementById('AnoFab');
+
+    $.ajax({
+        url: 'Pesquisar.php',
+        method:'post',
+        dataType:'json',
+        data:{
+            Placa: Valor
+        }
+    }).done((retorno)=>{
+        if(retorno=='Nenhuma Aeronave Encontrada'){
+            Swal.fire('Aviso',retorno,'info');
+        }else{
+            Fabricante.value=retorno['NM_FABRICANTE'];
+            AnoFab.value=retorno['NR_ANO_FABRICACAO'];
+            Modelo.value=retorno['DS_MODELO'];
+        }
+
+        console.log(retorno);
+    });
+}
+function BuscarTexto(){
+    let Carac=document.getElementById('Carac');
+
+    $.ajax({
+        url: 'Pesquisar.php',
+        method:'post',
+        dataType:'json',
+        data:{
+            GerarBTN: 'Gerar'
+        }
+    }).done((retorno)=>{
+        if(retorno=='Nenhum Texto Gerado'){
+            Swal.fire('Aviso',retorno,'error');
+        }else{
+            Carac.value=retorno['Texto'];
+        }
+
+        console.log(retorno);
+    });
 }

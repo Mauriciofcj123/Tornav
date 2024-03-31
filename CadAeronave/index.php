@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../cabecalho/style.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>Cadastro de Aeronaves</title>
 </head>
 <body>
@@ -14,19 +15,23 @@
         require('../cabecalho/index.php');
     ?>
     <form action="salvar.php" method="post" enctype="multipart/form-data" class='Formulario' id='Formulario'>
+        <label class='Titulo'>Prefixo</label><br>
+        <input class='Campo' id='Prefixo' type="text" name="Prefixo" id=""><br>
+        <input type="submit" value="Pesquisar" class="Botoes" id='PesquisarBTN'><br><br><br>
         <label class='Titulo'>Fabricante</label><br>
         <input class='Campo' id='Fabricante' type="text" name="Fabricante" id=""><br>
         <label class='Titulo'>Modelo</label><br>
         <input class='Campo' id='Modelo' type="text" name="Modelo" id=""><br>
         <label class='Titulo'>Caracteristicas</label><br>
-        <input type="text" id='Carac' class='Campo' name="Caracter"><br>
+        <textarea name="Caracter" id="Carac" cols="30" rows="10" class='Campo Longo'></textarea><br>
+        <input type="submit" value="Gerar Texto" id='GerarBTN'><br><br>
         <label class='Titulo'>Ano da Fabricação</label><br>
         <select name="AnoFab" id="AnoFab" class='Campo'>
             <?php
                 $Data=date('d/m/Y');
                 $Ano=explode('/',$Data);
 
-                for($a=$Ano[2]-40;$a<$Ano[2]+2;$a++){
+                for($a=$Ano[2]-60;$a<=$Ano[2];$a++){
                     echo "<option>".$a."</option>";
                 }
                 
@@ -60,7 +65,7 @@
                 </thead>
             </table>
         </div>
-        <input  type="button" value="Salvar" id='SalvarBTN' name='SalvarBTN'>
+        <input  type="button" value="Salvar" id='SalvarBTN' name='SalvarBTN' class="Botoes">
     </form>
     
 </body>
