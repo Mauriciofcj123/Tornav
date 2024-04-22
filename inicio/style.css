@@ -1,71 +1,975 @@
-.Video{
-    position: relative;
-    width: 100%;
-    height: 700px;
-    transform: translateY(0%);
-    top: -100px;
+html{
+    scroll-behavior: smooth;
+}
+@media (max-width:600px) {
+    .Video{
+        position: relative;
+        width: 100%;
+        height: 200px;
+        transform: translateY(0%);
+        top: 50px;
+    }
+    .Rebocadores{
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+    .Rebocadores h1{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: 200px 0px;
+        font-size: 2rem;
+        text-align: center;
+        background: none;
+    }
+    .Rebocador{
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .FundoVidro{
+        background-color: rgba(0, 174, 255, 0.041);
+        backdrop-filter: blur(10px);
+    }
+    .Titulo{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .CaracterDIV{
+        position: relative;
+        width: 100%;
+        background: none;
+    }
+    
+    .CaracterDIV p{
+        position: relative;
+        width: 95%;
+        font-size: 1.1rem;
+        border: none;
+        color: rgb(70, 70, 70);
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        
+    }
+    .CaracterDIV img{
+        position: relative;
+        width: 30%;
+        float: left;
+        margin-bottom: 100px;
+    }
+    
+    .DetalhesDIV{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .DetalhesDIV img{
+        position: relative;
+        width: 100%;
+    }
+    .DetalhesDIV h2{
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    .Rebocadores table td:nth-child(1){
+        width: 20%;
+        line-height: 50px;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .Rebocadores table td:nth-child(2){
+        width: 80%;
+        line-height: 50px;
+        text-align: left;
+    }
+    .Seta{
+        position: fixed;
+        width: 80px;
+        height: 80px;
+        float: right;
+        right: 0px;
+        top: 90vh;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 12;
+    
+    }
+    .Seta button{
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        opacity: 80%;
+    
+    }
+    .Seta img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .FundoVid{
+        position: absolute;
+        top: 150vh;
+        width: 100%;
+        z-index: 0;
+        background: none;
+    }
+    .FundoVid video{
+        width: 100%;
+    }
+    .FundoVid2{
+        position: absolute;
+        width: 100%;
+        top: 550vh;
+        z-index: 0;
+        background: none;
+    }
+    .FundoVid2 video{
+        width: 100%;
+    }
+    .Formas{
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        top: 6100px;
+        z-index: 0;
+    }
+    .Formas img:nth-child(1){
+        position: absolute;
+        height: 100%;
+        right: 0px;
+        float: right;
+    }
+    .Formas img:nth-child(2){
+        position: absolute;
+        height: 100%;
+        right: 0px;
+        float: right;
+        top: 15px;
+        animation: Paralax1 1ms linear;
+        animation-timeline: scroll();
+        animation-range: cover 0% cover 80%;
+    }
+    .Video video{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .diferenciais{
+        position: relative;
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        margin-top: 300px;
+        z-index: 10;
+    }
+    .diferenciais h1{
+        margin-bottom: 50px;
+        font-size: 1.2rem;
+    }
+    .LinhaDif{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+    }
+    
+    .DivDif1{
+        background-color: rgb(179, 227, 255);
+        width: 30%;
+    }
+    .DivDif2{
+        width: 70%;
+    }
+    .DivDif2 textarea{
+        outline: none;
+    }
+    .DivDif1 img{
+        position: relative;
+        text-align: center;
+        height: 50%;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+    .DivDif1 h2{
+        position: relative;
+        text-align: center;
+        top: 20%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+    }
+    .LinhaDif textarea{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 50px;
+        padding: 10px;
+        text-align: center;
+        font-size: 1rem;   
+        background: none;
+        border: none;
+        transform: translateY(-50%);
+        overflow: hidden;
+        resize: none;
+        font-weight: bold;
+        font-family: 'Arapey',Serif;
+        color: rgb(36, 36, 36);
+    }
+    .CorFundo{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .FuncCorretorDIV{
+        position: relative;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .FuncCorretor{
+        position: relative;
+        width: 100%;
+        text-align: left;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 200px 0px;
+    }
+    .FuncCorretor h1{
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .FuncCorretor h2{
+        margin-bottom: 50px;
+    }
+    
+    .FuncCorretor p{
+        position: relative;
+        width: 100%;
+        text-align: left;
+        animation: show2 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+        font-family: 'ubuntu,Sans Serif';
+        font-size: 1rem;
+        line-height: 30px;
+    
+    }
+    .FuncCorretor div{
+        position: relative;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+    
+    }
+    .Email{
+        position: relative;
+        width: 95%;
+        text-align: center;
+        background-color: rgb(179, 227, 255);
+        padding: 20px 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.336);
+        margin-bottom: 200px;
+    }
+    .Email div{
+        position: relative;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .Email h2{
+        width: 100%;
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .Email form{
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .Email form input{
+        position: relative;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.8rem;
+        color: rgb(27, 27, 27);
+        border: 1px solid black;
+        outline: none;
+        margin: 2px;
+        border-radius: 5px;
+    }
+    .Email form div{
+        position: relative;
+        width: 100%;
+        height: 200px;
+        justify-content: space-between;
+        top: 50px;
+        box-sizing: border-box;
+    }
+    .Email form div textarea{
+        position: relative;
+        width: 100%;
+        height: 70%;
+        left: 0px;
+        transform: translateY(0%);
+        text-align: center;
+        font-size: 1rem;
+        color: black;
+        font-family: 'ubuntu,Sans Serif';
+        border: 1px solid black;
+        resize: none;
+    }
+    .Email form button{
+        position: relative;
+        height: 25%;
+        float: right;
+        padding: 10px;
+        border: 1px solid rgb(0, 119, 255);
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        margin-top: 5px;
+        border-radius: 50%;
+    }
+    .Email form button img{
+        height: 100%;
+        transform: translateX(6%);
+    }
+    .footer{
+        position: absolute;
+        height: 300px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.849);
+        margin-bottom: 0px;
+        z-index: 11;
+    }
+    .footer ul{
+        position: relative;
+        width: 90%;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%,-50%);
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    .footer ul li{
+        height: 50px;
+        display: flex;
+    }
+    .footer ul li img{
+        width: 30px;
+        height: 30px;
+    }
+    .footer ul li a{
+        color: yellow;
+        font-weight: bold;
+        padding: 5px;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    .footer ul li p{
+        color: yellow;
+        font-weight: bold;
+        padding: 5px;
+        font-size: 1rem;
+    }
+    .footer div{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .footer div label{
+        color: white;
+        font-size: 0.8rem;
+    }
+    
+    .Animacao1{
+        animation: show1 1ms linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+    .Animacao2{
+        animation: show2 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+    .Animacao3{
+        animation: show3 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+    .Animacao4{
+        animation: show4 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 40%;
+    }
+    .Animacao5{
+        animation: show2 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+    .AnimacaoSeta{
+        animation: AnimSeta 1s linear;
+        animation-timeline: scroll();
+        animation-range: cover 0% cover 100%;
+    }
+}
+@media (min-width:600px) {
+    .Video{
+        position: relative;
+        width: 100%;
+        height: 700px;
+        transform: translateY(0%);
+        top: 100px;
+    }
+    .Rebocadores{
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        padding: 100px;
+        margin-top: 100px;
+    }
+    .Rebocadores h1{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: 200px 0px;
+        font-size: 2rem;
+        text-align: center;
+        background: none;
+    }
+    .Rebocadores video{
+        position: relative;
+        width: 100%;
+        padding-left: 400px;
+        padding-right: 400px;
+        background: none;
+    }
+    .Rebocador{
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        padding: 50px;
+    }
+    .FundoVidro{
+        background-color: rgba(0, 174, 255, 0.041);
+        backdrop-filter: blur(10px);
+    }
+    .Titulo{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .CaracterDIV{
+        position: relative;
+        width: 100%;
+        background: none;
+    }
+    
+    .CaracterDIV p{
+        position: relative;
+        width: 80%;
+        font-size: 1.5rem;
+        border: none;
+        color: rgb(70, 70, 70);
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        
+    }
+    .CaracterDIV img{
+        position: relative;
+        width: 30%;
+        float: left;
+        margin-bottom: 100px;
+    }
+    
+    .DetalhesDIV{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .DetalhesDIV img{
+        position: relative;
+        width: 80%;
+    }
+    .DetalhesDIV h2{
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    .Rebocadores table td:nth-child(1){
+        width: 20%;
+        line-height: 50px;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .Rebocadores table td:nth-child(2){
+        width: 80%;
+        line-height: 50px;
+        text-align: left;
+    }
+    .Seta{
+        position: fixed;
+        width: 80px;
+        height: 80px;
+        float: right;
+        right: 0px;
+        top: 90vh;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 12;
+    
+    }
+    .Seta button{
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        opacity: 80%;
+    
+    }
+    .Seta img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .FundoVid{
+        position: absolute;
+        top: 150vh;
+        width: 100%;
+        z-index: 0;
+        background: none;
+    }
+    .FundoVid video{
+        width: 100%;
+    }
+    .FundoVid2{
+        position: absolute;
+        width: 100%;
+        top: 800vh;
+        z-index: 0;
+        background: none;
+    }
+    .FundoVid2 video{
+        width: 100%;
+    }
+    .Formas{
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        top: 6100px;
+        z-index: 0;
+    }
+    .Formas img:nth-child(1){
+        position: absolute;
+        height: 100%;
+        right: 0px;
+        float: right;
+    }
+    .Formas img:nth-child(2){
+        position: absolute;
+        height: 100%;
+        right: 0px;
+        float: right;
+        top: 15px;
+        animation: Paralax1 1ms linear;
+        animation-timeline: scroll();
+        animation-range: cover 0% cover 80%;
+    }
+    .Video video{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .diferenciais{
+        position: relative;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        margin-top: 300px;
+        z-index: 10;
+    }
+    .diferenciais h1{
+        margin-bottom: 100px;
+    }
+    .LinhaDif{
+        width: 100%;
+        height: 220px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+    }
+    
+    .DivDif1{
+        background-color: rgb(179, 227, 255);
+        width: 30%;
+    }
+    .DivDif2{
+        width: 70%;
+    }
+    .DivDif2 textarea{
+        outline: none;
+    }
+    .DivDif1 img{
+        position: relative;
+        text-align: center;
+        height: 60%;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+    .DivDif1 h2{
+        position: relative;
+        text-align: center;
+        top: 20%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+    }
+    .LinhaDif textarea{
+        position: relative;
+        width: 70%;
+        height: fit-content;
+        text-align: center;
+        font-size: 1.3rem;   
+        padding: 20px;
+        background: none;
+        border: none;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+        resize: none;
+        font-weight: bold;
+        font-family: 'Arapey',Serif;
+        color: rgb(36, 36, 36);
+    }
+    .CorFundo{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .FuncCorretorDIV{
+        position: relative;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .FuncCorretor{
+        position: relative;
+        width: 100%;
+        text-align: left;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 200px 0px;
+    }
+    .FuncCorretor h1{
+        position: relative;
+        margin-bottom: 100px;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .FuncCorretor h2{
+        margin-bottom: 50px;
+    }
+    
+    .FuncCorretor p{
+        position: relative;
+        width: 100%;
+        text-align: left;
+        animation: show2 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+        font-family: 'ubuntu,Sans Serif';
+        font-size: 1.4rem;
+        line-height: 30px;
+    
+    }
+    .FuncCorretor div{
+        position: relative;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+    
+    }
+    .Email{
+        position: relative;
+        width: 80%;
+        text-align: center;
+        background-color: rgb(179, 227, 255);
+        padding: 50px 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.336);
+        margin-bottom: 200px;
+    }
+    .Email div{
+        position: relative;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .Email h2{
+        width: 100%;
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    .Email form{
+        position: relative;
+        width: 100%;
+        padding: 50px;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .Email form input{
+        position: relative;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1rem;
+        color: rgb(27, 27, 27);
+        border: 1px solid black;
+        outline: none;
+        margin: 2px;
+        border-radius: 5px;
+    }
+    .Email form div{
+        position: relative;
+        width: 100%;
+        height: 200px;
+        justify-content: space-between;
+        top: 50px;
+        box-sizing: border-box;
+    }
+    .Email form div textarea{
+        position: relative;
+        width: 100%;
+        height: 70%;
+        left: 0px;
+        transform: translateY(0%);
+        text-align: center;
+        font-size: 1rem;
+        color: black;
+        font-family: 'ubuntu,Sans Serif';
+        border: 1px solid black;
+        resize: none;
+    }
+    .Email form button{
+        position: relative;
+        height: 30%;
+        float: right;
+        padding: 5px;
+        border: none;
+        background:none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .Email form button img{
+        height: 100%;
+    }
+    .footer{
+        position: absolute;
+        height: 150px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.849);
+        margin-bottom: 0px;
+        z-index: 11;
+    }
+    .footer ul{
+        position: relative;
+        width: 50%;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+    .footer ul li{
+        height: 50px;
+        display: flex;
+    }
+    .footer ul li img{
+        width: 30px;
+        height: 30px;
+    }
+    .footer ul li a{
+        color: yellow;
+        font-weight: bold;
+        padding: 5px;
+        text-decoration: none;
+    }
+    .footer ul li p{
+        color: yellow;
+        font-weight: bold;
+        padding: 5px;
+    }
+    .footer div{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .footer div label{
+        color: white;
+        font-size: 0.8rem;
+    }
+    
+    .Animacao1{
+        animation: show1 1ms linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+    .Animacao2{
+        animation: show2 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+    .Animacao3{
+        animation: show3 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+    .Animacao4{
+        animation: show4 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 40%;
+    }
+    .Animacao5{
+        animation: show2 1s linear;
+        animation-timeline: view();
+        animation-range: cover 0% cover 30%;
+    }
+    .AnimacaoSeta{
+        animation: AnimSeta 1s linear;
+        animation-timeline: scroll();
+        animation-range: cover 0% cover 100%;
+    }
 }
 
-.Video video{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@keyframes show1 {
+    0%{
+        filter: blur(5px);
+        opacity: 0%;
+    }
+    100%{
+        filter: blur(0px);
+        opacity: 100%;
+    }
 }
-.diferenciais{
-    position: relative;
-    width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    margin-top: 300px;
+@keyframes show2 {
+    0%{
+        position: relative;
+        left: 30%;
+        transform: translateX(-50%);
+        opacity: 0%;
+    }
+    100%{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 100%;
+    }
 }
-.diferenciais h1{
-    margin-bottom: 100px;
+@keyframes show3 {
+    0%{
+        position: relative;
+        left: 70%;
+        transform: translateX(-50%);
+        opacity: 0%;
+    }
+    100%{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 100%;
+    }
 }
-.LinhaDif{
-    width: 100%;
-    height: 220px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
+@keyframes show4 {
+    0%{
+        transform: scale(0.8);
+        opacity: 0%;
+        filter: blur(4px);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 100%;
+        filter: blur(0px);
+    }
 }
+@keyframes Paralax1 {
+    50%{
+        top: 15px;
+    }
+    80%{
+        top: -40px;
+    }
+}
+@keyframes AnimSeta {
+    0%{
+        opacity: 0%;
+    }
+    10%{
+        opacity: 0%;
+        filter: blur(0px);
 
-.DivDif1{
-    background-color: rgb(179, 227, 255);
-    width: 30%;
-}
-.DivDif2{
-    width: 70%;
-}
-.DivDif1 img{
-    position: relative;
-    text-align: center;
-    height: 60%;
-    top: 40%;
-    transform: translateY(-50%);
-}
-.DivDif1 h2{
-    position: relative;
-    text-align: center;
-    top: 20%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-}
-.LinhaDif textarea{
-    position: relative;
-    width: 70%;
-    height: fit-content;
-    text-align: center;
-    font-size: 1.3rem;   
-    padding: 20px;
-    background: none;
-    border: none;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    resize: none;
-    font-weight: bold;
-    font-family: 'Arapey',Serif;
-    color: rgb(36, 36, 36);
-
+    }
+    12%{
+        filter: blur(2px);
+    }
+    14%{
+        opacity: 80%;
+        filter: blur(0px);
+    }
+    97%{
+        opacity: 80%;
+        filter: invert(0%);
+    }
+    100%{
+        opacity: 100%;
+        filter: invert(100%);
+    }
 }

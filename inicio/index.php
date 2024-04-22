@@ -8,46 +8,183 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../cabecalho/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="../cabecalho/script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <?php
         require('../cabecalho/index.php');
     ?>
-    <div class='Video'>
+    <div class='Seta AnimacaoSeta' >
+        <button><a href="#Topo"><img src="imgs/Seta.png"></a></button>
+    </div>
+    <div class='Video' id='Topo'>
         <video autoplay muted loop>
             <source src='../video/Video.mp4'>
     </video>
     </div>
-    <div class='diferenciais'>
-        <h1>Nossos Diferenciais</h1>
-        <div class='LinhaDif' style='background-color: rgb(179, 227, 255)'>
+    <div class='FundoVid'>
+        <video src="vid/Fundo.mp4" autoplay muted loop></video>
+    </div>
+    <div class='FundoVid2'>
+        <video src="vid/Fundo.mp4" autoplay muted loop></video>
+    </div>
+    <div class='Formas'>
+        <img src="imgs/Paralax1.png" alt="">
+        <img src="imgs/Paralax2.png" alt="">
+    </div>
+    <div class='Rebocadores'>
+        <h1 style='font-size: 2rem' id='Produtos'>Nossos Produtos</h1><br>
+        <div class='Rebocador FundoVidro'>
+            <div class='Titulo Animacao1'>
+                <h2>Rebocador Tornav Tug Light</h2>
+            </div>
+           <div class='CaracterDIV Animacao2'>
+                    <p style='text-align: center;color: black;font-size: 1.4rem;font-weight: bold;'>MANOBRABILIDADE E EFICIÊNCIA PARA SUAS OPERACOES AÉREAS</p><br><br><br><br>
+                    <p>Estamos empolgados em apresentar o Tug Light, o mais recente avanço em rebocadores de aeronaves projetados para oferecer manobrabilidade excepcional e eficiência inigualável. Com sua construção robusta e design inteligente, o Tug Light é a solução ideal para movimentação de aeronaves em espaços restritos e operações de baixa tonelagem.</p><br>
+                    <p>Uma característica distintiva do Tug Light é sua roda giratória frontal em poliuretano, que oferece uma capacidade de manobra incomparável. Esta roda permite que o rebocador gire em torno de seu próprio eixo, facilitando a navegação em espaços apertados e reduzindo o tempo e o esforço necessários para manobrar as aeronaves.</p>
+           </div>
+           <div class='DetalhesDIV Animacao4'>
+           <h2>Detalhes</h2>
+            <img src="imgs/TugLight.jpg" alt="">
+           </div>
+        </div>
+
+        <div class='Rebocador'>
+
+        <div class='Titulo Animacao1'>
+            <h2><u>Rebocador Tornav Tug New</u></h2><br>
+        </div>
+        <div name='Session' class='CaracterDIV Animacao2'>
+            <p style='text-align: center; color: black;font-size: 1.4rem;font-weight: bold;'>EFICIÊNCIA E CONFIABILIDADE PARA SUA FROTA AÉREA</p><br><br><br>
+            <p>Estamos orgulhosamente apresentando o Tug New, o mais recente avanço em tecnologia de rebocadores de aeronaves. Projetado para oferecer desempenho excepcional em uma variedade de situações, o Tug New é a escolha ideal para empresas que buscam eficiência e confiabilidade no solo.</p><br>
+            <p>Além de sua robustez e desempenho excepcionais, o Tug New também foi projetado com a praticidade em mente. Seu design ergonômico e intuitivo torna a operação simples e sem complicações, permitindo que sua equipe trabalhe com eficiência e conforto.</p>
+        </div>
+        <div class='DetalhesDIV Animacao4'>
+            <h2>Detalhes</h2>
+            <img src="imgs/TugNew.jpg">
+        </div>
+            
+        </div>
+        <div class='Rebocador FundoVidro'>
+
+            <div class='Titulo Animacao1'>
+                <h2><u>Rebocador Tornav Tug Max</u></h2><br>
+            </div>
+            <div name='Session' class='CaracterDIV Animacao2'>
+                <p style='text-align: center; color: black;font-size: 1.4rem;font-weight: bold;'>POTÊNCIA E CONFIABILIDADE EM MOVIMENTO</p><br><br><br>
+                <p>Apresentamos o Tug Max, o rebocador de aeronaves de médio porte que redefine o padrão de excelência em movimentação no solo. Projetado para operações ágeis e eficientes, o Tug Max é a escolha definitiva para quem busca confiabilidade e desempenho incomparáveis.</p><br>
+                <p>Construído com precisão utilizando aço carbono 60x40 de alta qualidade, este rebocador é mais do que apenas robusto; é uma obra-prima de engenharia, capaz de suportar até 10 toneladas de peso com facilidade e segurança. Com o Tug Max ao seu lado, nenhum desafio é grande demais.</p><br>
+            </div>
+            <div class='DetalhesDIV Animacao4'>
+                <h2>Detalhes</h2>
+                <img src="imgs/TugMax.jpg">
+            </div>
+                
+        </div>
+
+        <div class='Rebocador'>
+
+            <div class='Titulo Animacao1'>
+                <h2><u>Rebocador Tornav Tug Bravo</u></h2><br>
+            </div>
+            <div name='Session' class='CaracterDIV Animacao2'>
+                <p style='text-align: center; color: black;font-size: 1.4rem;font-weight: bold;'>VOCÊ ESTÁ PRONTO PARA ELEVAR SUAS OPERAÇÕES A NOVAS ALTURAS?</p><br><br><br>
+                <p>Apresentamos nosso rebocador de aeronaves de grande porte, O Tug Bravo é uma obra-prima de engenharia construída para suportar os desafios mais exigentes do setor.</p><br>
+                <p>Feito com aço carbono 100x50 de alta qualidade, este rebocador é uma combinação incomparável de força e durabilidade. Com uma capacidade impressionante de até 20 toneladas, ele é projetado para lidar com as maiores aeronaves do mundo, garantindo que sua frota esteja sempre pronta para decolar.</p>
+            </div>
+            <div class='DetalhesDIV Animacao4'>
+                <h2>Detalhes</h2>
+                <img src="imgs/TugBravo.jpg">
+            </div>
+                
+        </div>
+    </div>
+    <div class='diferenciais' id='Diferenciais'>
+        <h1 class='Animacao1'>Nossos Diferenciais</h1>
+        <div class='LinhaDif Animacao5' style='background-color: rgb(179, 227, 255)'>
             <div class='DivDif1' style='background-color: rgb(100, 198, 255);'>
                 <img src="imgs/Praticidade.png"><br>
                 <h2>Praticidade</h2>
             </div>
             <div class='DivDif2'>
-                <textarea>A versatilidade e a qualidade dos nossos rebocadores de aeronaves são perfeitos para qualquer aplicação de reboque em aeronaves até 9 toneladas.</textarea>
+                <textarea readonly>Nossos rebocadores são construídos com estrutura de aço carbono e pode ser facilmente operado por uma só pessoa.</textarea>
             </div>
         </div>
-        <div class='LinhaDif' style='background-color: white'>
+        <div class='LinhaDif Animacao3' style='background-color: white'>
             <div class='DivDif1' style='background-color: rgb(230, 253, 255)'>
                 <img src="imgs/Seguranca.png">
                 <h2>Segurança</h2>
             </div>
             <div class='DivDif2'>
-                <textarea>Nossos rebocadores têm sistemas de aceleração e frenagem suaves que facilita seu manuseio.</textarea>
+                <textarea readonly>Nossos rebocadores têm sistemas de aceleração e frenagem suaves que facilita seu manuseio.</textarea>
             </div>
         </div>
-        <div class='LinhaDif' style='background-color: rgb(179, 227, 255)'>
+        <div class='LinhaDif Animacao5' style='background-color: rgb(179, 227, 255)'>
             <div class='DivDif1' style='background-color: rgb(100, 198, 255);'>
                 <img src="imgs/Versatilidade.png">
                 <h2>Versatilidade</h2>
             </div>
             <div class='DivDif2'>
-                <textarea>Nossos rebocadores são construídos com estrutura de aço carbono e pode ser facilmente operado por uma só pessoa.</textarea>
+                <textarea readonly>A versatilidade e a qualidade dos nossos rebocadores de aeronaves são perfeitos para qualquer aplicação de reboque em aeronaves até 20 toneladas.</textarea>
             </div>
         </div>
     </div>
+
+    <div class="FuncCorretorDIV">
+        <div class='FuncCorretor'>
+            <h1 class='Animacao2' style='text-align: center;'>AQUI VOCÊ TEM O SUPORTE DOS NOSSOS CORRETORES DE AERONAVES.</h1>
+            <h2 class='Animacao2' style='text-align: center;'>O que faz um corretor de aeronaves?</h2>
+            <div>
+                <p>✔Decidir as necessidades de um cliente</p>
+                <p>✔Apresentar orçamentos e preparar cotações</p>
+                <p>✔Determinar o valor e as especificações de uma aeronav</p>
+                <p>✔Negociar um acordo entre comprador e vendedor de aeronave</p>
+                <p>✔Seja responsável pela aquisição e venda de aeronaves</p>
+                <p>✔Gere vendas de clientes em potencial</p>
+                <p>✔Estratégia para fechar vendas</p>
+                <p>✔Fornecer um bom atendimento ao cliente</p>
+            </div>
+        </div>
+    </div>
+    <div class='Email Animacao1' id='Contato'>
+    <h1>Contato</h1>
+    <h2>Entre em contato com a nossa equipe pelo formulário abaixo.</h2><br><br>
+        <form>
+            <input type="text" id='Nome' placeholder='Nome Completo'>
+            <input type="text" id='NContato' placeholder='Numero para Contato'>
+            <input type="text" id='Email' placeholder='E-mail para contato'>
+            <input type="text" id='Titulo' placeholder='Titulo'>
+            <div>
+                <textarea name="MensagemTXT" id='Mensagem' placeholder='Mensagem'></textarea><br>
+                <p id='Erro'></p>
+                <button type='submit' name='EnviarBTN' id='EnviarBTN'><img src="imgs/Enviar.png"></button>
+            </div>
+        </form>
+    </div>
+    <div class='footer'>
+        <ul>
+            <li><img src="imgs/telefone.png" alt=""><p>(65) 3686-3165 / 99983-9891</p></li>
+            <li><img src="imgs/email.png" alt=""><a href="mailto:atendimento@tornav.com.br">atendimento@tornav.com.br</a></li>
+            <li><img src="imgs/instagram.png" alt=""><a href="https://www.instagram.com/tornavmt?igsh=N2x0YTFia2ZmcmFr&utm_source=qr">tornavmt</a></li>
+        </ul>
+        <div>
+            <label>TORNAV INDUSTRIA E COMERCIO DE MAQUINAS E EQUIPAMENTOS LTDA</label><br>
+            <label>CNPJ: 20.931.744/0001-37</label>
+        </div>
+        
+    </div>
+
 </body>
+
 </html>
