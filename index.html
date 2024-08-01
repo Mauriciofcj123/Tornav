@@ -18,13 +18,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="../cabecalho/script.js" defer></script>
+	<link rel="stylesheet" href="stylec.css">
     <script src="script.js" defer></script>
+	<script src="scriptc.js" defer></script>
 </head>
 <body>
-    <?php
-        require('../cabecalho/index.php');
-    ?>
+    <div class='cabecalho'>
+        <button onClick='Hamburger()' id='Hamburger'><img src="imgs/Hamburger.png" ></button>
+        <img src="imgs/logo.png" class='Logo'>
+        <ul class='Menu' id='Menu'>
+            <li><a href="#Produtos">Produtos</a></li>
+            <li><a href="#Diferenciais">Diferenciais</a></li>
+            <li><a href="#Contato">Contato</a></li>
+        </ul>
+    </div>
     <div class='Seta AnimacaoSeta' >
         <button><a href="#Topo"><img src="imgs/Seta.png"></a></button>
     </div>
